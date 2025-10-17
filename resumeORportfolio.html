@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYRESUME</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --bg: #f6f8fb;
+            --card: #ffffff;
+            --accent: #0ea5a4;
+            --accent-2: #6366f1;
+            --muted: #6b7280;
+            --text: #0f172a;
+            --glass: rgba(255,255,255,0.6);
+        }
+
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;
+            padding:32px;
+            background: linear-gradient(135deg,#eef2ff 0%, #f6f8fb 50%);
+            font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color:var(--text);
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+        }
+
+        /* Outer card */
+        .wrapper{
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+
+        /* Header */
+        header{
+            padding: 28px 40px;
+            background: linear-gradient(90deg, rgba(14,165,164,0.06), rgba(99,102,241,0.04));
+        }
+        header h1{
+            margin:0;
+            font-size:20px;
+            letter-spacing:0.6px;
+        }
+        header p{
+            margin:8px 0 0;
+            color:var(--muted);
+            font-size:14px;
+        }
+        header a{ color:var(--accent); text-decoration:none; font-weight:600 }
+
+        /* Main two-column layout */
+        main{
+            display:grid;
+            grid-template-columns: 320px 1fr;
+            gap:32px;
+            padding:32px 40px;
+        }
+
+        /* Left column cards */
+        #skills, #education, #certifications{
+            background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(250,250,250,0.85));
+            padding:20px;
+            border-radius:10px;
+            border: 1px solid rgba(15,23,42,0.04);
+            box-shadow: 0 4px 18px rgba(11,15,25,0.02);
+        }
+
+        /* Section headings */
+        section h2{
+            margin:0 0 12px;
+            font-size:16px;
+            color:#0b1220;
+        }
+
+        /* Right column content */
+        #objective, #experience, #projects{
+            padding:0;
+        }
+
+        /* Lists and articles */
+        ul{ margin:0; padding-left:18px; color:#334155 }
+        li{ margin-bottom:8px; line-height:1.45 }
+        article{ margin-bottom:18px }
+        article h3{ margin:0 0 6px; font-size:15px }
+        article p em{ color:var(--muted); font-style:normal; font-size:13px }
+
+        /* Skill chips */
+        .chip{ display:inline-block; background:rgba(14,165,164,0.12); color:var(--accent); padding:5px 10px; border-radius:999px; font-size:13px; margin:4px 6px 4px 0 }
+
+        /* Accent bar for experience items */
+        article h3::before{
+            content: "";
+            display:inline-block;
+            width:8px;
+            height:8px;
+            background: linear-gradient(135deg,var(--accent),var(--accent-2));
+            border-radius:2px;
+            margin-right:10px;
+            vertical-align:middle;
+        }
+
+        /* Footer */
+        footer{
+            padding:18px 40px;
+            background:transparent;
+            border-top:1px solid rgba(15,23,42,0.04);
+            text-align:right;
+            color:var(--muted);
+            font-size:13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 880px){
+            body{ padding:18px }
+            main{ grid-template-columns: 1fr; padding:20px; gap:20px }
+            header, footer{ padding:20px }
+        }
+
+        /* Print friendly */
+        @media print{
+            body{ background:white; padding:0 }
+            .wrapper{ box-shadow:none; border-radius:0 }
+            a:after{ content: " (" attr(href) ")"; font-size:10px; color:#111 }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PRACHOTHAN REDDY KUTHURU</h1>
+        <p>
+            +91-8790730958 &nbsp;|&nbsp;
+            <a href="mailto:kuthuruprachothanreddy@gmail.com">kuthuruprachothanreddy@gmail.com</a> &nbsp;|&nbsp;
+            <a href="#" aria-label="LinkedIn profile">LinkedIn</a> &nbsp;|&nbsp;
+            <a href="#" aria-label="GitHub profile">GitHub</a>
+        </p>
+        <hr>
+    </header>
+
+    <main>
+        <section id="objective">
+            <h2>Career Objective</h2>
+            <p>
+                Enthusiastic and detail-oriented professional with a strong foundation in frontend development,
+                Basic Java, C#, AWS, and MySQL. Passionate about creating user-friendly applications and optimizing
+                solutions through cloud technologies. Eager to learn, adapt, and contribute effectively to problem-solving
+                and team collaboration in a dynamic, growth-driven environment.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, Bootstrap</li>
+                <li><strong>Backend:</strong> Basic Java, C#, MySQL</li>
+                <li><strong>Cloud:</strong> AWS — EC2, S3, IAM, Lambda, CloudWatch, VPC, RDS</li>
+                <li><strong>Version Control:</strong> GitHub</li>
+                <li><strong>Soft Skills:</strong> Problem-solving, Teamwork, Leadership, Organization</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>B.Tech — Electronics and Communication Engineering</strong><br>
+                    Vaagdevi College of Engineering, Warangal (2022 – 2025) — CGPA: 7.36
+                </li>
+                <li>
+                    <strong>Diploma in Engineering (SBTET)</strong><br>
+                    Jyothishmathi Institute of Technology and Science, Karimnagar (2019 – 2022) — CGPA: 6.73
+                </li>
+                <li>
+                    <strong>SSC</strong><br>
+                    Paramita Learner’s Foundation, Karimnagar (2018 – 2019) — CGPA: 8.3
+                </li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Internship &amp; Work Experience</h2>
+
+            <article>
+                <h3>Campus Ambassador — Zuno by foundit</h3>
+                <p><em>May 2024 – Feb 2025</em></p>
+                <ul>
+                    <li>Increased app engagement through promotional campaigns and student outreach.</li>
+                    <li>Organized 3+ workshops to educate students about career development opportunities.</li>
+                    <li>Collaborated with the Zuno team to enhance platform user experience.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Intern — HDLC Technologies</h3>
+                <p><em>May 2023 – Jun 2023</em></p>
+                <ul>
+                    <li>Developed a responsive portfolio website using HTML, CSS, and JavaScript.</li>
+                    <li>Integrated basic MySQL connectivity for simple data storage and retrieval.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Intern (Virtual) — AWS</h3>
+                <p><em>Dec 2022 – Feb 2023</em></p>
+                <ul>
+                    <li>Hands-on experience with EC2, S3, VPC, Lambda, RDS, IAM, and CloudWatch.</li>
+                    <li>Built and managed a basic cloud-based application using AWS resources.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Trainee — Physitech Electronics</h3>
+                <p><em>Aug 2021 – Jan 2022</em></p>
+                <ul>
+                    <li>Developed foundational knowledge in VLSI, Embedded Systems, and MATLAB.</li>
+                    <li>Learned VHDL programming and applied it to electronic circuit designs.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <strong>Fingerprint Vehicle Starter</strong> — Biometric vehicle security system using Arduino Uno
+                    and fingerprint sensor. Implemented real-time access monitoring. (C++, Embedded Systems, Arduino)
+                </li>
+                <li>
+                    <strong>Calculator Web Application</strong> — Responsive calculator with interactive UI. (HTML, CSS, JavaScript)
+                </li>
+                <li>
+                    <strong>Portfolio Website</strong> — Personal portfolio built with Bootstrap and hosted on GitHub Pages.
+                </li>
+            </ul>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Getting Started with Databases — AWS (2025)</li>
+                <li>Web Development (HTML &amp; CSS for Beginners) — Udemy (2023)</li>
+                <li>C Programming Basics — Udemy (2023)</li>
+                <li>Duolingo English Test (2023)</li>
+                <li>AWS Academy Cloud Foundations — AWS (2023)</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>Last updated: October 2025</p>
+    </footer>
+</body>
+</html>
